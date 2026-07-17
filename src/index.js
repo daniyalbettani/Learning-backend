@@ -1,9 +1,7 @@
 import dns from "dns";
 import dotenv from "dotenv";
 import connectDb from "./db/index.js";
-import express from "express";
-
-const app = express();
+import { app } from "./app.js";
 
 // Set DNS servers to resolve MongoDB SRV records (bypassing ISP/local DNS restrictions)
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
